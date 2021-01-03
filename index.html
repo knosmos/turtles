@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>turtles ad infinitum</title>
+        <link rel=stylesheet href=assets/style.css type=text/css>
+        <link rel=icon href=assets/turtle.png>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id=container>
+            <h1>turtles ad infinitum</h1>
+            <h1>
+                <span style="color:rgb(16, 135, 172);">lvl
+                    <a id="prev" style="color:rgb(206, 39, 109);">&lt;</a>
+                    <span id="lvl"></span>
+                    <a id="next" style="color:rgb(206, 39, 109);">&gt;</a>
+                </span>
+            </h1>
+            <div id=main></div>
+            <h2 id=controlText>arrow keys to move</h2>
+            <div id=controls style="display:none;">
+                <a onclick = "panels[0].player.moveLeft()"><img src="assets/left.png" class="controlButton"></a>
+                <a onclick = "panels[0].player.moveUp()"><img src="assets/up.png" class="controlButton"></a>
+                <a onclick = "panels[0].player.moveDown()"><img src="assets/down.png" class="controlButton"></a>
+                <a onclick = "panels[0].player.moveRight()"><img src="assets/right.png" class="controlButton"></a>
+            </div>
+            <p>made with love by <a href="https://www.github.com/knosmos" style="color:rgb(206, 39, 109);">knosmos</a></p>
+            <br>
+        </div>
+        <script src=scripts/maps.js></script>
+        <script src=scripts/classes.js></script>
+        <script src=scripts/main.js></script>
+    </body>
+</html>

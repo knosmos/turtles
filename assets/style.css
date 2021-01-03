@@ -1,0 +1,64 @@
+/* will clean this up... eventually */
+
+@font-face {
+    font-family: pixel;
+    src: url("pixel.ttf");
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background-color:#ece1d4;
+}
+
+#container{
+    margin:20px;
+    margin-left:20%;
+    margin-right:20%;
+    font-family:pixel;
+    font-weight:lighter;    
+    color:rgb(56, 63, 70);   
+}
+
+h1,h2{
+    font-size:30pt;
+    text-shadow:3px 3px #ccc2b7;
+    margin:10px 0px 5px;
+}
+h2{font-size:20pt;}
+
+@media screen and (max-width:800px){
+    #container{
+        margin:20px;
+    }
+}
+
+#main{
+    position: relative;
+    width:100%;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+@keyframes water{
+    0%{opacity:0;}
+    50%{opacity:1;}
+    100%{opacity:0;}
+}
+
+@keyframes hover{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(10%)}
+    100%{transform:translateY(0)}
+}
+
+.controlButton{
+    width:20%;
+    image-rendering:pixelated;
+    filter:sepia(0.4);
+}
