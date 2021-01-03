@@ -91,3 +91,26 @@ if (isMobile) {
     document.getElementById("controlText").style.display = "none"; // hide instructions
     document.getElementById("controls").style.display = "block"; // show controls
 }
+
+//play music upon user interaction
+document.addEventListener('keydown', musicPlay);
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('playAudio').play();
+    document.getElementById('playAudio').volume = 0.2;
+    document.removeEventListener('keydown', musicPlay);
+    document.removeEventListener('click', musicPlay);
+}
+function toggleMusic(){
+    let a = document.getElementById("playAudio");
+    if (a.paused){ a.play() }
+    else {a.pause()}
+}
+
+// click/levelup sounds
+function clickSound(){
+    document.getElementById('click').play();
+}
+function levelUpSound(){
+    document.getElementById('levelUp').play();
+}

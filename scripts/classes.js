@@ -177,10 +177,10 @@ class panelBlank{
         this.elem.style.display = "none";
         this.elem2.style.display = "none";
         newPanel = new panel(this.x,this.y,this.w,this.h,this.parent);
-        console.log(this.h,leny);
         makepanel(maps[lvl],newPanel);
         panels.push(newPanel);
         this.parent.child = newPanel;
+        levelUpSound();
     }
 }
 
@@ -202,6 +202,7 @@ class button{
         if (p.x == this.x && p.y == this.y){
             if (!this.hidden){
                 this.press();
+                clickSound();
             }   
         }
     }
@@ -213,7 +214,6 @@ class power extends button{
         this.hidden = false;
     }
     press(){
-        console.log("power key pressed");
         // show the keyboard buttons
         this.parent.left.show();
         this.parent.right.show();

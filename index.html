@@ -18,13 +18,20 @@
             </h1>
             <div id=main></div>
             <h2 id=controlText>arrow keys to move</h2>
-            <div id=controls style="display:none;">
-                <a onclick = "panels[0].player.moveLeft()"><img src="assets/left.png" class="controlButton"></a>
-                <a onclick = "panels[0].player.moveUp()"><img src="assets/up.png" class="controlButton"></a>
-                <a onclick = "panels[0].player.moveDown()"><img src="assets/down.png" class="controlButton"></a>
-                <a onclick = "panels[0].player.moveRight()"><img src="assets/right.png" class="controlButton"></a>
+            <div id=controls style="text-align:center;display:none;">
+                <a onclick = "panels[0].player.moveUp();clickSound();"><img src="assets/up.png" class="controlButton"></a>
+                <br>
+                <a onclick = "panels[0].player.moveLeft();clickSound();"><img src="assets/left.png" class="controlButton"></a>
+                <a onclick = "panels[0].player.moveDown();clickSound();"><img src="assets/down.png" class="controlButton"></a>
+                <a onclick = "panels[0].player.moveRight();clickSound();"><img src="assets/right.png" class="controlButton"></a>
             </div>
-            <p>made with love by <a href="https://www.github.com/knosmos" style="color:rgb(206, 39, 109);">knosmos</a></p>
+            <audio autoplay loop id="playAudio">
+                <source src="assets/theme.mp3">
+            </audio>
+            <audio src="assets/click.mp3" id="click"></audio>
+            <audio src="assets/levelUp.mp3" id="levelUp"></audio>
+            <a onclick="toggleMusic();" style="color:rgb(206, 39, 109);"><h2>toggle music</h2></a>
+            <p>made by <a href="https://www.github.com/knosmos" style="color:rgb(206, 39, 109);">knosmos</a></p>
             <br>
         </div>
         <script src=scripts/maps.js></script>
