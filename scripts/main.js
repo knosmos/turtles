@@ -95,9 +95,9 @@ if (isMobile) {
 //play music upon user interaction
 document.addEventListener('keydown', musicPlay);
 document.addEventListener('click', musicPlay);
+document.getElementById('playAudio').volume = 0.2;
 function musicPlay() {
     document.getElementById('playAudio').play();
-    document.getElementById('playAudio').volume = 0.2;
     document.removeEventListener('keydown', musicPlay);
     document.removeEventListener('click', musicPlay);
 }
