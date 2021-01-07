@@ -114,3 +114,9 @@ function clickSound(){
 function levelUpSound(){
     document.getElementById('levelUp').play();
 }
+
+// change the score indicator
+function updateScore(){
+    document.getElementById('score').innerHTML = panels.length;
+}
+updateScore();

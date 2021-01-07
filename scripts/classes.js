@@ -181,6 +181,7 @@ class panelBlank{
         panels.push(newPanel);
         this.parent.child = newPanel;
         levelUpSound();
+        updateScore();
     }
 }
 

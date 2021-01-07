@@ -16,7 +16,8 @@ html,body{
     margin-left:20%;
     margin-right:20%;
     font-family:pixel;
-    font-weight:lighter;    
+    font-weight:lighter;
+    letter-spacing:0.1em;    
     color:rgb(56, 63, 70);   
 }
 
@@ -42,7 +43,8 @@ a{
     text-decoration: none;
 }
 a:hover{
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+    cursor:pointer;
 }
 
 @keyframes water{
